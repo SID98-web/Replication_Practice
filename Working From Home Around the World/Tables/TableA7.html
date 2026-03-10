@@ -1,0 +1,151 @@
+<!-- preamble start -->
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_spsocx0bjwz7tjyozmfq</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<!-- preamble end -->
+
+    <script>
+
+      function styleCell_spsocx0bjwz7tjyozmfq(i, j, css_id) {
+          var table = document.getElementById("tinytable_spsocx0bjwz7tjyozmfq");
+          var cell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function spanCell_spsocx0bjwz7tjyozmfq(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_spsocx0bjwz7tjyozmfq");
+        const targetCell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+        if (!targetCell) {
+          console.warn(`Cell at (${i}, ${j}) not found.`);
+        }
+
+        // Get all cells that need to be removed
+        const cellsToRemove = [];
+        for (let r = 0; r < rowspan; r++) {
+          for (let c = 0; c < colspan; c++) {
+            if (r === 0 && c === 0) continue; // Skip the target cell
+            const cell = table.querySelector(`[data-row="${i + r}"][data-col="${j + c}"]`);
+            if (cell) {
+              cellsToRemove.push(cell);
+            }
+          }
+        }
+
+        // Remove all cells
+        cellsToRemove.forEach(cell => cell.remove());
+
+        // Set rowspan and colspan of the target cell if it exists
+        if (targetCell) {
+          targetCell.rowSpan = rowspan;
+          targetCell.colSpan = colspan;
+        }
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '6', j: 3 }, { i: '6', j: 2 }, { i: '6', j: 1 }, { i: '6', j: 4 },  ], css_id: 'tinytable_css_7ruuc5of9nahq7trrpmb',}, 
+          { positions: [ { i: '4', j: 1 }, { i: '4', j: 4 }, { i: '4', j: 3 }, { i: '4', j: 2 },  ], css_id: 'tinytable_css_c9fq9vpgm6l0j5ef3qsr',}, 
+          { positions: [ { i: '1', j: 2 }, { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '5', j: 2 }, { i: '5', j: 1 }, { i: '3', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '2', j: 2 }, { i: '1', j: 4 }, { i: '5', j: 3 }, { i: '3', j: 4 }, { i: '3', j: 3 }, { i: '5', j: 4 }, { i: '2', j: 4 },  ], css_id: 'tinytable_css_e5ibxw36shnt9fe2om4x',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '0', j: 4 }, { i: '0', j: 3 }, { i: '0', j: 2 },  ], css_id: 'tinytable_css_jfry4y0z0ihu3h4s8heu',}, 
+          { positions: [ { i: '6', j: 0 },  ], css_id: 'tinytable_css_2u7uf6nvas8w29k6fxfq',}, 
+          { positions: [ { i: '4', j: 0 },  ], css_id: 'tinytable_css_xr1ud0bmjusndvnujpix',}, 
+          { positions: [ { i: '1', j: 0 }, { i: '2', j: 0 }, { i: '3', j: 0 }, { i: '5', j: 0 },  ], css_id: 'tinytable_css_7uwffm4dxvgmdlc1hjsv',}, 
+          { positions: [ { i: '0', j: 0 },  ], css_id: 'tinytable_css_rwoazsbj0d5pu4xqkv5o',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_spsocx0bjwz7tjyozmfq(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_7ruuc5of9nahq7trrpmb, .table th.tinytable_css_7ruuc5of9nahq7trrpmb { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_c9fq9vpgm6l0j5ef3qsr, .table th.tinytable_css_c9fq9vpgm6l0j5ef3qsr { text-align: center; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_e5ibxw36shnt9fe2om4x, .table th.tinytable_css_e5ibxw36shnt9fe2om4x { text-align: center; }
+      .table td.tinytable_css_jfry4y0z0ihu3h4s8heu, .table th.tinytable_css_jfry4y0z0ihu3h4s8heu { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_2u7uf6nvas8w29k6fxfq, .table th.tinytable_css_2u7uf6nvas8w29k6fxfq { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_xr1ud0bmjusndvnujpix, .table th.tinytable_css_xr1ud0bmjusndvnujpix { text-align: left; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_7uwffm4dxvgmdlc1hjsv, .table th.tinytable_css_7uwffm4dxvgmdlc1hjsv { text-align: left; }
+      .table td.tinytable_css_rwoazsbj0d5pu4xqkv5o, .table th.tinytable_css_rwoazsbj0d5pu4xqkv5o { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_spsocx0bjwz7tjyozmfq" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <thead>
+        <caption>Table A.7: Oxford stringency index</caption>
+              <tr>
+                <th scope="col" data-row="0" data-col="0"> </th>
+                <th scope="col" data-row="0" data-col="1">n_work_home</th>
+                <th scope="col" data-row="0" data-col="2">daysemployee_work_home</th>
+                <th scope="col" data-row="0" data-col="3">daysemployer_work_home</th>
+                <th scope="col" data-row="0" data-col="4">value_WFH_rawpercent25</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan='5'>* p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="0">Cum. Oxford Stringency (std.)</td>
+                  <td data-row="1" data-col="1">0.251***</td>
+                  <td data-row="1" data-col="2">0.050</td>
+                  <td data-row="1" data-col="3">0.133*</td>
+                  <td data-row="1" data-col="4">0.489</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="0"></td>
+                  <td data-row="2" data-col="1">(0.089)</td>
+                  <td data-row="2" data-col="2">(0.067)</td>
+                  <td data-row="2" data-col="3">(0.068)</td>
+                  <td data-row="2" data-col="4">(0.466)</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="0">Cum. COVID-19 deaths per capita (std.)</td>
+                  <td data-row="3" data-col="1">0.005</td>
+                  <td data-row="3" data-col="2">0.052</td>
+                  <td data-row="3" data-col="3">−0.030</td>
+                  <td data-row="3" data-col="4">0.281</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="0"></td>
+                  <td data-row="4" data-col="1">(0.086)</td>
+                  <td data-row="4" data-col="2">(0.061)</td>
+                  <td data-row="4" data-col="3">(0.055)</td>
+                  <td data-row="4" data-col="4">(0.300)</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="0">Num.Obs.</td>
+                  <td data-row="5" data-col="1">33091</td>
+                  <td data-row="5" data-col="2">36078</td>
+                  <td data-row="5" data-col="3">34875</td>
+                  <td data-row="5" data-col="4">36078</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="0">R2</td>
+                  <td data-row="6" data-col="1">0.099</td>
+                  <td data-row="6" data-col="2">0.068</td>
+                  <td data-row="6" data-col="3">0.084</td>
+                  <td data-row="6" data-col="4">0.057</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- postamble start -->
+  </body>
+
+</html>
+<!-- postamble end -->
+<!-- hack to avoid NA insertion in last line -->

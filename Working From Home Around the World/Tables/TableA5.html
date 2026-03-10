@@ -1,0 +1,165 @@
+<!-- preamble start -->
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_g6a2jl0p9q5nsz0x768u</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<!-- preamble end -->
+
+    <script>
+
+      function styleCell_g6a2jl0p9q5nsz0x768u(i, j, css_id) {
+          var table = document.getElementById("tinytable_g6a2jl0p9q5nsz0x768u");
+          var cell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function spanCell_g6a2jl0p9q5nsz0x768u(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_g6a2jl0p9q5nsz0x768u");
+        const targetCell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+        if (!targetCell) {
+          console.warn(`Cell at (${i}, ${j}) not found.`);
+        }
+
+        // Get all cells that need to be removed
+        const cellsToRemove = [];
+        for (let r = 0; r < rowspan; r++) {
+          for (let c = 0; c < colspan; c++) {
+            if (r === 0 && c === 0) continue; // Skip the target cell
+            const cell = table.querySelector(`[data-row="${i + r}"][data-col="${j + c}"]`);
+            if (cell) {
+              cellsToRemove.push(cell);
+            }
+          }
+        }
+
+        // Remove all cells
+        cellsToRemove.forEach(cell => cell.remove());
+
+        // Set rowspan and colspan of the target cell if it exists
+        if (targetCell) {
+          targetCell.rowSpan = rowspan;
+          targetCell.colSpan = colspan;
+        }
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '8', j: 3 }, { i: '8', j: 2 }, { i: '8', j: 1 }, { i: '8', j: 4 },  ], css_id: 'tinytable_css_5c5f48myykliw8t8k7hb',}, 
+          { positions: [ { i: '6', j: 3 }, { i: '6', j: 2 }, { i: '6', j: 1 }, { i: '6', j: 4 },  ], css_id: 'tinytable_css_5shid4x6pmrlzwz3gvz1',}, 
+          { positions: [ { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '1', j: 3 }, { i: '7', j: 1 }, { i: '3', j: 3 }, { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '1', j: 1 }, { i: '1', j: 4 }, { i: '7', j: 2 }, { i: '3', j: 4 }, { i: '5', j: 1 }, { i: '5', j: 4 }, { i: '2', j: 3 }, { i: '7', j: 4 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '7', j: 3 }, { i: '5', j: 2 }, { i: '2', j: 4 }, { i: '4', j: 4 },  ], css_id: 'tinytable_css_u3n4ci4psimavl5hs9a4',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '0', j: 4 }, { i: '0', j: 3 }, { i: '0', j: 2 },  ], css_id: 'tinytable_css_a3in484bhwzjg30gjolh',}, 
+          { positions: [ { i: '8', j: 0 },  ], css_id: 'tinytable_css_wyzbongagl24h1r0w5lo',}, 
+          { positions: [ { i: '6', j: 0 },  ], css_id: 'tinytable_css_viif758w1hwmjfp5xbc9',}, 
+          { positions: [ { i: '1', j: 0 }, { i: '2', j: 0 }, { i: '3', j: 0 }, { i: '4', j: 0 }, { i: '5', j: 0 }, { i: '7', j: 0 },  ], css_id: 'tinytable_css_jkae2ftovxg748p8jbsg',}, 
+          { positions: [ { i: '0', j: 0 },  ], css_id: 'tinytable_css_ifdsi9s6vifa4n7x4z7m',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_g6a2jl0p9q5nsz0x768u(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_5c5f48myykliw8t8k7hb, .table th.tinytable_css_5c5f48myykliw8t8k7hb { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_5shid4x6pmrlzwz3gvz1, .table th.tinytable_css_5shid4x6pmrlzwz3gvz1 { text-align: center; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_u3n4ci4psimavl5hs9a4, .table th.tinytable_css_u3n4ci4psimavl5hs9a4 { text-align: center; }
+      .table td.tinytable_css_a3in484bhwzjg30gjolh, .table th.tinytable_css_a3in484bhwzjg30gjolh { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_wyzbongagl24h1r0w5lo, .table th.tinytable_css_wyzbongagl24h1r0w5lo { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_viif758w1hwmjfp5xbc9, .table th.tinytable_css_viif758w1hwmjfp5xbc9 { text-align: left; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_jkae2ftovxg748p8jbsg, .table th.tinytable_css_jkae2ftovxg748p8jbsg { text-align: left; }
+      .table td.tinytable_css_ifdsi9s6vifa4n7x4z7m, .table th.tinytable_css_ifdsi9s6vifa4n7x4z7m { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_g6a2jl0p9q5nsz0x768u" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <thead>
+        <caption>Table A.5: Adding mask mandates</caption>
+              <tr>
+                <th scope="col" data-row="0" data-col="0"> </th>
+                <th scope="col" data-row="0" data-col="1">n_work_home</th>
+                <th scope="col" data-row="0" data-col="2">daysemployee_work_home</th>
+                <th scope="col" data-row="0" data-col="3">daysemployer_work_home</th>
+                <th scope="col" data-row="0" data-col="4">value_WFH_rawpercent25</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan='5'>* p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="0">Cum. Lockdown Stringency (std.)</td>
+                  <td data-row="1" data-col="1">0.174*</td>
+                  <td data-row="1" data-col="2">−0.000</td>
+                  <td data-row="1" data-col="3">0.135**</td>
+                  <td data-row="1" data-col="4">0.119</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="0"></td>
+                  <td data-row="2" data-col="1">(0.092)</td>
+                  <td data-row="2" data-col="2">(0.064)</td>
+                  <td data-row="2" data-col="3">(0.055)</td>
+                  <td data-row="2" data-col="4">(0.472)</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="0">Cum. COVID-19 deaths per capita (std.)</td>
+                  <td data-row="3" data-col="1">−0.002</td>
+                  <td data-row="3" data-col="2">0.052</td>
+                  <td data-row="3" data-col="3">−0.039</td>
+                  <td data-row="3" data-col="4">0.286</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="0"></td>
+                  <td data-row="4" data-col="1">(0.085)</td>
+                  <td data-row="4" data-col="2">(0.046)</td>
+                  <td data-row="4" data-col="3">(0.056)</td>
+                  <td data-row="4" data-col="4">(0.267)</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="0">Cum. Mask Mandate Orders (std.)</td>
+                  <td data-row="5" data-col="1">0.060</td>
+                  <td data-row="5" data-col="2">0.169***</td>
+                  <td data-row="5" data-col="3">0.002</td>
+                  <td data-row="5" data-col="4">0.484*</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="0"></td>
+                  <td data-row="6" data-col="1">(0.086)</td>
+                  <td data-row="6" data-col="2">(0.054)</td>
+                  <td data-row="6" data-col="3">(0.046)</td>
+                  <td data-row="6" data-col="4">(0.251)</td>
+                </tr>
+                <tr>
+                  <td data-row="7" data-col="0">Num.Obs.</td>
+                  <td data-row="7" data-col="1">33091</td>
+                  <td data-row="7" data-col="2">36078</td>
+                  <td data-row="7" data-col="3">34875</td>
+                  <td data-row="7" data-col="4">36078</td>
+                </tr>
+                <tr>
+                  <td data-row="8" data-col="0">R2</td>
+                  <td data-row="8" data-col="1">0.099</td>
+                  <td data-row="8" data-col="2">0.074</td>
+                  <td data-row="8" data-col="3">0.086</td>
+                  <td data-row="8" data-col="4">0.058</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- postamble start -->
+  </body>
+
+</html>
+<!-- postamble end -->
+<!-- hack to avoid NA insertion in last line -->
